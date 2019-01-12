@@ -7,7 +7,7 @@ class FEN extends Parse {
 
     static get regexVerifier () {
         return "(?:(?:(?:[pnbrqkPNBRQK1-8]{1,8})\\/?){8})" + //Piece Placement: any of those characters, allow 1 to 8 of each, folloed by a slash, all that repeated 8 times. Standard chess FEN produced. Slash is optional (0 or 1). 
-            "(?:(?:[pnbrqkPNBRQK]{1,16})\\/?)?" + //Second group: crazyhouse additional inhand pieces, if they exist.
+            "(?:(?:[pnbrqkPNBRQK]{1,30})\\/?)?" + //Second group: crazyhouse additional inhand pieces, if they exist.
             "\\s+" + //white space
             "(?:b|w)" + //Side to Move
             "\\s+" + //white space
@@ -24,7 +24,7 @@ class FEN extends Parse {
 
     static get regexString () {
         return "((?:(?:[pnbrqkPNBRQK1-8]{1,8})\\/?){8})" + //Piece Placement: any of those characters, allow 1 to 8 of each, folloed by a slash, all that repeated 8 times. Standard chess FEN produced. Slash is optional (0 or 1). 
-            "((?:[pnbrqkPNBRQK]{1,16})\\/?)?" + //Second group: crazyhouse additional inhand pieces, if they exist.
+            "((?:[pnbrqkPNBRQK]{1,30})\\/?)?" + //Second group: crazyhouse additional inhand pieces, if they exist.
             "\\s+" + //white space
             "(b|w)" + //Side to Move
             "\\s+" + //white space
